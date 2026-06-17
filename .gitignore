@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.synctex(busy)
+*.run.xml
+*.bcf
+*-blx.bib
+
+# User photo (keep generic; users add their own)
+photo.jpg

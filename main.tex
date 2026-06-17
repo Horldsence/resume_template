@@ -1,0 +1,98 @@
+% !TEX program = xelatex
+% ============================================================
+%  main.tex — 双栏简历模板（仅需修改此文件）
+%  编译: XeLaTeX main.tex
+% ============================================================
+\documentclass{resume}
+
+% ============================================================
+%  用户信息（修改以下内容即可）
+% ============================================================
+
+\begin{document}
+
+\noindent
+\begin{minipage}[t]{0.3\linewidth}
+  % ===== 左侧栏 =====
+
+  \photo{2.5cm}{3.4cm}                          % 无照片（占位框）
+                                                 % 如需照片: \photo{2.5cm}{3.4cm}[photo.jpg]
+  \name{姓名}
+  \position{意向岗位}
+
+  \sepline\vspace{0.1em}
+
+  \begin{center}
+  \begin{minipage}{0.94\linewidth}\raggedright
+    \phone{123-4567-8901}
+    \email{yourname@example.com}
+    \birth{YYYY 年 M 月 D 日}
+    \cet{CET-4 / CET-6}
+    \github{github.com/yourname}
+    \blog{yourname.github.io}
+  \end{minipage}
+  \end{center}
+
+  \leftsection{获奖项目}
+  \award{竞赛名称}{获奖等级}{年份}
+  \award{竞赛名称}{获奖等级}{年份}
+  \award{竞赛名称}{获奖等级}{年份}
+  \award{竞赛名称}{获奖等级}{年份}
+
+  \leftsection{荣誉证书}
+  {\small
+  \begin{tabularx}{\linewidth}{@{}X@{}}
+    \cert{证书名称} \\
+    \cert{证书名称} \\
+    \cert{证书名称} \\
+  \end{tabularx}\par}
+
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.67\linewidth}
+  % ===== 右侧栏 =====
+
+  \rightsection{教育经历}
+  \school{学校名称 · 专业名称}{起止时间}
+  {\small 学历 · 学院名称\par}
+  \vspace{0.08em}
+  \courses{主修方向：课程1、课程2、课程3、课程4}
+
+  \rightsection{项目经历}
+  \project{项目名称}{起止时间}
+  \detail{项目背景与目标简述}
+  \detail{核心技术栈与开发方式}
+  \detail{关键实现细节或技术创新点}
+  \detail{项目成果或获奖情况}
+
+  \project{项目名称}{起止时间}
+  \detail{项目背景与目标简述}
+  \detail{核心技术栈与开发方式}
+  \detail{关键实现细节或技术创新点}
+  \detail{项目成果或获奖情况}
+
+  \project{项目名称}{起止时间}
+  \detail{项目背景与目标简述}
+  \detail{核心技术栈与开发方式}
+  \detail{关键实现细节或技术创新点}
+  \detail{项目成果或获奖情况}
+
+  \rightsection{相关技能}
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}p{3.2em}@{}X@{}}
+    \skill{类别}{技能1、技能2、技能3、技能4}
+    \skill{类别}{技能1、技能2、技能3、技能4}
+    \skill{类别}{技能1、技能2、技能3、技能4}
+    \skill{类别}{技能1、技能2、技能3、技能4}
+  \end{tabularx}
+
+  \rightsection{自我评价}
+  {\small
+  在此撰写个人自我评价，突出个人技术优势与职业发展方向。%
+  可分段描述不同方面的能力特点，每段以句号分隔。%
+  建议包含技术热情、工程能力、团队协作等方面的简要描述。%
+  篇幅控制在4-5句左右，保持简洁有力。\par}
+
+\end{minipage}
+
+\end{document}
