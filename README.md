@@ -6,7 +6,7 @@
 
 ## 预览
 
-![预览](main.pdf)
+[预览文件](main.pdf)
 
 ![预览](image/image.png)
 

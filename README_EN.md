@@ -6,7 +6,7 @@ A two-column Chinese resume template built with XeLaTeX.
 
 ## Preview
 
-![Preview](main.pdf)
+[Preview Doc](main.pdf)
 
 ![Preview](image/image.png)
 
