@@ -8,7 +8,7 @@
 
 [预览文件](main.pdf)
 
-![预览](image/image.png)
+![预览](image/image.jpg)
 
 ## 快速开始
 

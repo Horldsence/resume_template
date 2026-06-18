@@ -8,7 +8,7 @@ A two-column Chinese resume template built with XeLaTeX.
 
 [Preview Doc](main.pdf)
 
-![Preview](image/image.png)
+![Preview](image/image.jpg)
 
 ## Quick Start
 
