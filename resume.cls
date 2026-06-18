@@ -26,7 +26,6 @@
 \setmainfont{JetBrainsMono Nerd Font}[Ligatures=TeX]
 
 % ---------- 图标 ----------
-\RequirePackage{fontawesome5}
 
 % ---------- 表格 ----------
 \RequirePackage{tabularx}
@@ -41,6 +40,7 @@
 % ---------- 其他 ----------
 \RequirePackage{hyperref}
 \hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+\urlstyle{same}
 \pagestyle{empty}
 
 % ============================================================
@@ -75,18 +75,18 @@
   \noindent{\color{rulecolor}\rule{\linewidth}{0.5pt}}%
 }
 
-% --- 联系方式（内部用 \infoitem 对齐图标与文字）---
+% --- 联系方式（内部用 \infoitem 对齐标签与文字）---
 \newcommand{\infoitem}[2]{%
-  \begin{tabular}{@{}m{1.3em}@{}m{\dimexpr\linewidth-1.3em\relax}@{}}
-    \centering\small\color{accent}#1 & \small #2 \\[0.04em]
+  \begin{tabular}{@{}m{3.6em}@{\hspace{0.6em}}m{\dimexpr\linewidth-4.2em\relax}@{}}
+    \raggedright\small\color{accent}#1 & \small #2 \\[0.08em]
   \end{tabular}%
 }
-\newcommand{\phone}[1]{\infoitem{\faPhone}{#1}}
-\newcommand{\email}[1]{\infoitem{\faEnvelope}{#1}}
-\newcommand{\birth}[1]{\infoitem{\faCalendar}{#1}}
-\newcommand{\cet}[1]{\infoitem{\faLanguage}{#1}}
-\newcommand{\github}[1]{\infoitem{\faGithub}{#1}}
-\newcommand{\blog}[1]{\infoitem{\faGlobe}{#1}}
+\newcommand{\phone}[1]{\infoitem{电话}{#1}}
+\newcommand{\email}[1]{\infoitem{邮箱}{#1}}
+\newcommand{\birth}[1]{\infoitem{出生年月}{#1}}
+\newcommand{\cet}[1]{\infoitem{英语}{#1}}
+\newcommand{\github}[1]{\infoitem{GitHub}{\url{#1}}}
+\newcommand{\blog}[1]{\infoitem{博客}{\url{#1}}}
 
 % --- 左栏章节标题 ---
 \newcommand{\leftsection}[1]{%
@@ -99,9 +99,9 @@
 
 % --- 右栏章节标题 ---
 \newcommand{\rightsection}[1]{%
-  \vspace{0.45em}%
+  \vspace{0.65em}%
   \noindent{\bfseries\large\color{accent}#1}
-  \vspace{0.04em}\par%
+  \vspace{-0.12em}\par%
   \noindent{\color{rulecolor}\rule{\linewidth}{0.5pt}}%
   \vspace{0.1em}\par%
 }
@@ -130,6 +130,15 @@
   \vspace{0.02em}%
 }
 \newcommand{\detail}[1]{{\small #1\par}\vspace{0.08em}}
+
+% --- 开源项目：\osproject{名称}{数据}{简介} ---
+\newcommand{\osproject}[3]{%
+  \vspace{0.06em}%
+  \noindent\begin{tabularx}{\linewidth}{@{}X@{}r@{}}
+    {\small\bfseries #1} & \small\color{lightaccent} #2
+  \end{tabularx}\par%
+  {\small #3\par}\vspace{0.06em}%
+}
 
 % --- 技能：\skill{类别}{内容}（需放在 tabularx 内）---
 \newcommand{\skill}[2]{%
